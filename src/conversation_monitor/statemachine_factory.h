@@ -26,10 +26,9 @@ class StateMachineFactory
         static std::map<std::string, StateMachine> msStateMachines;
 
         /**
-        * Instanciates all available machines from the resource directory
+        * Instanciates all available machines a resource directory
         */
-        static void prepareProtocolsFromResourceDirs();
-
+        static void prepareProtocolsFromResourceDir(const std::string& directory);
 public:
         /**
         * Set the resource dir where to search for the protocol definitions
@@ -51,9 +50,9 @@ public:
         static StateMachine getStateMachine(const std::string& protocol);
         
         /**
-        * Instanciates all available machines a resource directory
+        * Instanciates all available machines from the resource directory
         */
-        static void prepareProtocolsFromResourceDir(const std::string& directory);
+        static void prepareProtocolsFromResourceDirs();
 };
 
 } // end namespace acl
